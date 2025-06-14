@@ -1,0 +1,62 @@
+{
+    "sample_rows": [
+        {
+            "order_id": "order01",
+            "payment_sequential": 1,
+            "payment_type": "credit_card",
+            "payment_installments": 4,
+            "payment_value": 74.63
+        },
+        {
+            "order_id": "order02",
+            "payment_sequential": 1,
+            "payment_type": "credit_card",
+            "payment_installments": 6,
+            "payment_value": 158.8
+        },
+        {
+            "order_id": "order03",
+            "payment_sequential": 1,
+            "payment_type": "credit_card",
+            "payment_installments": 10,
+            "payment_value": 116.13
+        },
+        {
+            "order_id": "order04",
+            "payment_sequential": 1,
+            "payment_type": "credit_card",
+            "payment_installments": 10,
+            "payment_value": 104.4
+        },
+        {
+            "order_id": "order05",
+            "payment_sequential": 1,
+            "payment_type": "boleto",
+            "payment_installments": 1,
+            "payment_value": 189.0
+        }
+    ],
+    "table_name": "order_payments",
+    "table_fullname": "order_payments",
+    "column_names": [
+        "order_id",
+        "payment_sequential",
+        "payment_type",
+        "payment_installments",
+        "payment_value"
+    ],
+    "column_types": [
+        "TEXT",
+        "INTEGER",
+        "TEXT",
+        "INTEGER",
+        "REAL"
+    ],
+    "description": [
+        "",
+        "",
+        "",
+        "",
+        ""
+    ]
+}

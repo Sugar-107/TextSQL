@@ -1,0 +1,78 @@
+{
+    "sample_rows": [
+        {
+            "order_id": "order01",
+            "order_item_id": 1,
+            "product_id": "product01",
+            "seller_id": "aae3bfea055532c57fb453ed3ec80b30",
+            "shipping_limit_date": "2017-03-07 23:50:10",
+            "price": 68.0,
+            "freight_value": 11.09
+        },
+        {
+            "order_id": "order02",
+            "order_item_id": 1,
+            "product_id": "product02",
+            "seller_id": "cfb1a033743668a192316f3c6d1d2671",
+            "shipping_limit_date": "2018-03-05 04:15:43",
+            "price": 124.9,
+            "freight_value": 14.27
+        },
+        {
+            "order_id": "order03",
+            "order_item_id": 1,
+            "product_id": "product03",
+            "seller_id": "12b9676b00f60f3b700e83af21824c0e",
+            "shipping_limit_date": "2017-04-25 18:22:48",
+            "price": 199.0,
+            "freight_value": 28.14
+        },
+        {
+            "order_id": "order04",
+            "order_item_id": 1,
+            "product_id": "product04",
+            "seller_id": "da8622b14eb17ae2831f4ac5b9dab84a",
+            "shipping_limit_date": "2018-07-25 04:45:07",
+            "price": 114.9,
+            "freight_value": 23.6
+        },
+        {
+            "order_id": "order05",
+            "order_item_id": 1,
+            "product_id": "product05",
+            "seller_id": "9add47bf45ce8e8c7db6b9cf670b1e09",
+            "shipping_limit_date": "2017-10-11 20:49:31",
+            "price": 109.8,
+            "freight_value": 24.15
+        }
+    ],
+    "table_name": "order_items",
+    "table_fullname": "order_items",
+    "column_names": [
+        "order_id",
+        "order_item_id",
+        "product_id",
+        "seller_id",
+        "shipping_limit_date",
+        "price",
+        "freight_value"
+    ],
+    "column_types": [
+        "TEXT",
+        "INTEGER",
+        "TEXT",
+        "TEXT",
+        "TEXT",
+        "REAL",
+        "REAL"
+    ],
+    "description": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+    ]
+}

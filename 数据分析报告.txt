@@ -1,0 +1,10 @@
+数据分析报告：
+
+1. 每个产品类别中最常用的支付方式及其平均支付次数：
+- automotivo: credit_card, 平均支付次数: 1
+- cama_mesa_banho: credit_card, 平均支付次数: 1
+- fashion_bolsas_e_acessorios: credit_card, 平均支付次数: 1
+- ferramentas_jardim: boleto, 平均支付次数: 1
+- relogios_presentes: credit_card, 平均支付次数: 1
+
+结论：在当前的数据集中，每个产品类别下的订单数量较少，导致每个类别下的最大支付次数和平均支付次数均为1。

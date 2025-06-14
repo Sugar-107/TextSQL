@@ -1,0 +1,12 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+## 项目技术栈
+Python & uv: 主要编程语言以及环境管理器
+Streamlit: 用于构建Web用户界面
+LangChain & LangGraph: 构建和运行AI驱动的链式应用和状态图
+Pandas: 数据处理和分析
+
+Matplotlib:生成图表

@@ -5,11 +5,17 @@ from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 from tabulate import tabulate
 
-llm = ChatOpenAI(
-    api_key=os.getenv("DASHSCOPE_APIKEY"),
-    base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
-    model="qwen-max",
-)
+
+
+def get_llm():
+    api_key = os.getenv("DASHSCOPE_APIKEY")
+    if not api_key:
+        raise ValueError("请设置 DASHSCOPE_APIKEY 环境变量")
+    return ChatOpenAI(
+        api_key=api_key,
+        base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
+        model="qwen-max",
+    )
 
 
 def run_sql_query(query: str, db_path='ecommerce.db'):
@@ -88,12 +94,15 @@ Q: <SQL>select count(*) from users</SQL>
 
     print(prompt_value.to_string())
 
+    llm = get_llm()
     res = llm.invoke(prompt_value).content
     return res.replace("<SQL>", "").replace("</SQL>", "")
 
 
 if __name__ == "__main__":
+    
+
     sql = gen_system_prompt(
-        "What is the highest monthly delivered orders volume in the year with the lowest annual delivered orders volume among 2016, 2017, and 2018?")
+        "在2016、2017和2018年中,全年'已送达'订单数量最少的那一年,该年'已送达'订单数量最多的月份的订单量是多少?")
     print(sql)
     run_sql_query(sql)

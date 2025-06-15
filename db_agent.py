@@ -48,12 +48,16 @@ agent = initialize_agent(
 system_prompt = """
  你是一个能够进行数据分析的智能体，当用户输入数据分析需求时，你需要先将需求转换为可执行的sqlite支持的SQL，然后通过工具来执行SQL获取返回结果，
  最后总结SQL查询到的结果，当所有任务完成后，你需要通过工具生成一份数据分析报告并写到一份文件中。
-                                     
- 你可以一步一步来分析需求，最终确定需要生成的查询SQL。
- 
- 为了提高SQL生成的准确性，生成SQL后请对SQL的准确性进行评估，如果有问题则重新生成SQL
- 
- 当执行SQL失败时，你需要根据错误信息来修正SQL再重新尝试执行。
+ ### 分析需求步骤 ###                                     
+ 1. 你可以一步一步来分析需求，将需求拆分为多个子需求，并执行子需求的SQL，执行完毕后需要检查子需求的结果是否符合预期，再执行下一个子需求，最终确定需要生成的查询SQL。
+ 2. 为了提高SQL生成的准确性，生成SQL后请对SQL的准确性进行评估，如果有问题则重新生成SQL
+ 3. 当执行SQL失败时，你需要根据错误信息来修正SQL再重新尝试执行。
+ 4. 当执行SQL成功时，你需要检查结果是否符合预期，如果不符合预期则需要重新生成SQL。
+ 5. 当所有子需求都执行成功后，你需要总结所有子需求的结果，并生成一份数据分析报告。
+
+ ### 目标 ###
+ 1.将结果写入数据分析报告中
+ 2.并附上sql步骤和结果
  
  ### 工具 ###
  execute_sql : 可以通过传入的SQL语句来执行SQL，并返回执行结果。
@@ -79,4 +83,4 @@ def invoke(msg: str):
 
 
 if __name__ == "__main__":
-    invoke("Could you help me calculate the average of the total number of payments made using the most preferred payment method for each product category, where the most preferred payment method in a category is the one with the highest number of payments? " )
+    invoke("在2016、2017和2018年中,全年'已送达'订单数量最少的那一年,该年'已送达'订单数量最多的月份的订单量是多少? ")
